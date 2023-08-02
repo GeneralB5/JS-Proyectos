@@ -1,16 +1,101 @@
-const nombre = prompt("Registre su nombre aqui");
+/// contrasena pra agregar bebida = 0819237
+let Nombre = prompt("Registre su nombre aqui");
+const BEBIDASSS = []
+const registrodestock =()=>{
+    const stockk = parseInt(prompt("Cuanto stock tiene disponible"))
+    if (stockk > 0) { 
+        return "si"
+    }else{ 
+    return "no"
+    }
+};
+class BEBIDASS{
+    constructor(nombre,precio,marca,stock){
+        this.nombre = nombre
+        this.precio = precio
+        this.marca = marca
+        this.stock = stock
+    }
+    mostrarInfo(){
+        return ` Bebida = ${this.nombre} ,Precio = ${this.precio} ,Marca = ${this.marca} ,Stock = ${this.stock}`
+    }
+    documentMostrarInfo(){
+        return`
+        <b>Nombre = ${this.nombre}</b><br>
+        <b>Precio = ${this.precio}</b><br>
+        <b>Marca = ${this.marca}</b><br>
+        <b>Stock = ${this.stock}</b><br>
+        `
+    }
+    prompt1(){
+        if(documentTrue == 1 && bebida4.stock == "si"){
+            return `"Elija su bebida ( 1 coca, 2 fanta, 3 agua, 4 ${this.nombre} )"`
+        }else{
+            return "Elija su bebida ( 1 coca, 2 fanta, 3 agua)"
+        }
+    }
+    nombreDeBebida(){
+        return this.nombre
+    }
+}
+ const Bebida1 = new BEBIDASS("CocaCola",4,"COCACOLACOMPANY","Si");
+ const Bebida2 = new BEBIDASS("Agua",2,"Andes","Si");
+ const Bebida3 = new BEBIDASS("Fanta",6,"COCACOLACOMPANY","Si");
+ let bebida4 = 0;
 function vueltaDeInformacion( DNIS,NombreS,dineroingresadosS){//////// dineroingresado,nombre,dni armar una funcion constructora
     this.DNIS = DNIS
     this.dineroingresadosS =dineroingresadosS
     this.NombreS =NombreS
-    return "Nombre de la persona: " +this.NombreS+". Su dni es: "+this.DNIS+". Eldionero ingresado fue: "+this.dineroingresadosS
-    }
+    return "Nombre de la persona: " +this.NombreS+". Su dni es: "+this.DNIS+". El dinero ingresado fue: "+this.dineroingresadosS
+    };
+    let documentTrue = 0;
 let restas=(a,b)=> a-b;
 let contadorDeIntentos = 0;
 let bebida = 0;
 let contadorDeIntentosTarjeta = 0;
 let true1 = 0;
 let DNIFINAL = 0;
+if(Nombre == "0819237"){
+ alert("Bienvenido, usted ingreso a agregar bebida");
+ alert("Siga las consignas paso a paso porfavor");
+ while(true){
+let name = prompt("nombre de la bebida selecionada");
+let price = parseInt(prompt("Ingrese su precio"));
+let Company = prompt("Ingrese su compania de procedencia");
+BEBIDASSS.push(Bebida1.mostrarInfo(), Bebida2.mostrarInfo(), Bebida3.mostrarInfo());
+if(name == "" || !isNaN(price) || price > 1 || price < 10 || Company == ""|| price <= 10 ){
+    bebida4 = new BEBIDASS(name,price,Company,registrodestock());
+    BEBIDASSS.push(bebida4.mostrarInfo())
+    documentTrue = 1;
+   while(true){
+    Nombre = prompt("Ingrese su nombre real ")
+    if(isNaN(Nombre)){
+        break;
+    } else{
+        continue;
+    }
+    }
+   
+    break;
+}else{
+    alert("ingreselo de nuevo");
+    continue;
+}
+ }}else{
+    console.log("no quiso agregar bebida")
+    bebida4 = new BEBIDASS("",0,"","no");
+    
+}
+document.write(`
+${Bebida1.documentMostrarInfo()}<br>
+${Bebida2.documentMostrarInfo()}<br>
+${Bebida3.documentMostrarInfo()}<br>
+`
+)
+if(documentTrue == 1){
+    document.write(`${bebida4.documentMostrarInfo()}<br>
+    `)
+}
 while(true){
     let DNIngresado = prompt("Ingrese su dni para terminar su registro (maximo de 8 numeros)");
         let DNI = DNIngresado.slice(0,8)
@@ -25,7 +110,7 @@ continue;
 alert("Log-in")
 do {////login
     let nombreIngresado = prompt("Ingrese usuario")
-    if (nombreIngresado === nombre) {
+    if (nombreIngresado === Nombre) {
         alert("Bienvenido");
         true1 = 1;
         break;
@@ -36,35 +121,61 @@ do {////login
 } while (contadorDeIntentos < 3)
 if(true1 == 1){
 let cantidadDeDinero = parseInt(prompt("ingrese el monto que dispone y le diremos que podra comprar"));
+if(documentTrue == 1 && bebida4.stock == "si"){
+    while(true){
+    if(cantidadDeDinero >= Bebida2.precio && cantidadDeDinero < Bebida1.precio){
+        if(bebida4.precio >= Bebida2.precio && bebida4.precio < Bebida1.precio){
+        alert(`Puede comprar ${Bebida2.nombre} y ${bebida4.nombre}`)
+        break;
+        }else{ alert(`Puede comprar ${Bebida2.nombre}`)
+                break;  }
+    }else if(cantidadDeDinero >= Bebida1.precio && cantidadDeDinero < Bebida3.precio ){
+        if(bebida4.precio >= Bebida1.precio || bebida4.precio < Bebida3.precio){
+        alert(`Puede comprar ${Bebida2.nombre}, ${bebida4.nombre} y ${Bebida1.nombre}`)
+        break;}
+        else{alert(`Puede comprar ${Bebida2.nombre} y ${Bebida1.nombre}`)
+            break;}
+    }else if(bebida4.precio >= Bebida3 || bebida4.precio < 10 && cantidadDeDinero >= Bebida3.precio){
+        alert(`puede comprar todo el catalogo`)
+        break;
+    }else{
+        alert(`Dinero insuficiente o no a ingresado dinero`)
+        continue;
+    }}
+
+}else{
 switch (true) {////dineroEnMano
     case (cantidadDeDinero < 2 ):
         alert ("dinero insuficiente");
         break;
     case (cantidadDeDinero >= 2, cantidadDeDinero < 3):
-        alert("Puede comprar agua")
+        alert(`Puede comprar ${Bebida2.nombre}`)
         break;
-    case (cantidadDeDinero > 3, cantidadDeDinero < 5 ):
-        alert("puede comprar agua y coca")
+    case (cantidadDeDinero >= 3, cantidadDeDinero < 6 ):
+        alert(`Puede comprar ${Bebida2.nombre} y ${Bebida1.nombre}`)
         break;
-        case (cantidadDeDinero > 5):
-            alert("puede comprar agua,coca y fanta")
+        case (cantidadDeDinero >= 6):
+            alert(`Puede comprar ${Bebida2.nombre}, ${Bebida1.nombre} y ${Bebida3.nombre}`)
             break;
     default:
         alert("Lo que a ingresado no es dinero")
         break;
-}
+}}
 if(cantidadDeDinero >= 2){///bebida
 alert("Elija su bebida")
-let bebidaElegida = parseInt(prompt("Elija su bebida ( 1 coca, 2 fanta, 3 agua)"))
-if(bebidaElegida == 3 && cantidadDeDinero >= 2){
-    alert("gracias por la compra del agua");
-    bebida = 2;
-}else if (bebidaElegida == 1 && cantidadDeDinero > 3){
-    alert("gracias por la compra del coca");
-    bebida = 4;
-}else if(bebidaElegida == 2 && cantidadDeDinero > 5){
-    alert("gracias por la compra del fanta");
-    bebida = 6;
+let bebidaElegida = parseInt(prompt(bebida4.prompt1()))
+if(bebidaElegida == 3 && cantidadDeDinero >= Bebida2.precio){
+    alert(`gracias por la compra de su ${Bebida2.nombre} `);
+    bebida = Bebida2.precio;
+}else if (bebidaElegida == 1 && cantidadDeDinero >= Bebida1.precio){
+    alert(`gracias por la compra de su ${Bebida1.nombre} `);
+    bebida = Bebida1.precio;
+}else if(bebidaElegida == 2 && cantidadDeDinero >= Bebida3.precio){
+    alert(`gracias por la compra de su ${Bebida3.nombre} `);
+    bebida = Bebida3.precio;
+}else if(bebidaElegida == 4 && documentTrue == 1 && cantidadDeDinero >= bebida4.precio && bebida4.stock == "si"){
+    alert(`gracias por la compra de su ${bebida4.nombre} `);
+    bebida = bebida4.precio;
 }else{
     alert("No se a podido realizar la compra");
 }
@@ -80,11 +191,14 @@ if(bebida > 1){
     }
     contadorDeIntentosTarjeta++
 } while (contadorDeIntentosTarjeta < 3)
-    console.log(vueltaDeInformacion(DNIFINAL,nombre,cantidadDeDinero));
+    for(let x of BEBIDASSS){
+        console.log(BEBIDASSS)
+    }
+    console.log(vueltaDeInformacion(DNIFINAL,Nombre,cantidadDeDinero));
 }else{ 
     alert("Su tarjeta no a sido aceptada");
     console.error("Su tarjeta no a sido ingreada correctamente o reconocida");
-    onsole.log("Se reiniciara el proceso");
+    console.log("Se reiniciara el proceso");
 }
 }else{
     alert("Dinero insuficiente");
