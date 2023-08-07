@@ -1,6 +1,10 @@
 /// contrasena pra agregar bebida = 0819237
 let Nombre = prompt("Registre su nombre aqui");
-const BEBIDASSS = []
+const BebidasEnStock = []
+const BEBIDASSSinfo = [];
+const BEBIDASSS = [];
+const personasQueCompraron = [];
+const prueba= [ {Nombre : "ivan",precio : 5}]
 const registrodestock =()=>{
     const stockk = parseInt(prompt("Cuanto stock tiene disponible"))
     if (stockk > 0) { 
@@ -38,23 +42,29 @@ class BEBIDASS{
         return this.nombre
     }
 }
- const Bebida1 = new BEBIDASS("CocaCola",4,"COCACOLACOMPANY","Si");
- const Bebida2 = new BEBIDASS("Agua",2,"Andes","Si");
- const Bebida3 = new BEBIDASS("Fanta",6,"COCACOLACOMPANY","Si");
+ const Bebida1 = new BEBIDASS("CocaCola",4,"COCACOLACOMPANY","si");
+ const Bebida2 = new BEBIDASS("Agua",2,"Andes","si");
+ const Bebida3 = new BEBIDASS("Fanta",6,"COCACOLACOMPANY","si");
  let bebida4 = 0;
-function vueltaDeInformacion( DNIS,NombreS,dineroingresadosS){//////// dineroingresado,nombre,dni armar una funcion constructora
+ class vueltaDeInformacion{ 
+ constructor( DNIS,NombreS,dineroingresadosS){//////// dineroingresado,nombre,dni armar una funcion constructora
     this.DNIS = DNIS
     this.dineroingresadosS =dineroingresadosS
     this.NombreS =NombreS
-    return "Nombre de la persona: " +this.NombreS+". Su dni es: "+this.DNIS+". El dinero ingresado fue: "+this.dineroingresadosS
-    };
+}
+     info(){
+        return `Nombre: ${this.NombreS}, su dni es:${this.DNIS} y su dinero ingresado fue de: ${this.dineroingresadosS}</br>`
+    }
+}
+
     let documentTrue = 0;
 let restas=(a,b)=> a-b;
 let contadorDeIntentos = 0;
 let bebida = 0;
 let contadorDeIntentosTarjeta = 0;
-let true1 = 0;
 let DNIFINAL = 0;
+BEBIDASSS.push(Bebida1,Bebida2,Bebida3)
+BEBIDASSSinfo.push(Bebida1.mostrarInfo(), Bebida2.mostrarInfo(), Bebida3.mostrarInfo());
 if(Nombre == "0819237"){
  alert("Bienvenido, usted ingreso a agregar bebida");
  alert("Siga las consignas paso a paso porfavor");
@@ -62,10 +72,10 @@ if(Nombre == "0819237"){
 let name = prompt("nombre de la bebida selecionada");
 let price = parseInt(prompt("Ingrese su precio"));
 let Company = prompt("Ingrese su compania de procedencia");
-BEBIDASSS.push(Bebida1.mostrarInfo(), Bebida2.mostrarInfo(), Bebida3.mostrarInfo());
 if(name == "" || !isNaN(price) || price > 1 || price < 10 || Company == ""|| price <= 10 ){
     bebida4 = new BEBIDASS(name,price,Company,registrodestock());
-    BEBIDASSS.push(bebida4.mostrarInfo())
+    BEBIDASSSinfo.push(bebida4.mostrarInfo())
+    BEBIDASSS.push(bebida4)
     documentTrue = 1;
    while(true){
     Nombre = prompt("Ingrese su nombre real ")
@@ -112,16 +122,26 @@ do {////login
     let nombreIngresado = prompt("Ingrese usuario")
     if (nombreIngresado === Nombre) {
         alert("Bienvenido");
-        true1 = 1;
         break;
     } else {
         alert("Intentelo devuelta (nombre o dni mal ingresado)");
     };
     contadorDeIntentos++;
 } while (contadorDeIntentos < 3)
-if(true1 == 1){
+const prueba1 = BEBIDASSS.filter((x)=>{
+    return x.stock == "si" 
+})
+for(let x of prueba1){
+    BebidasEnStock.push(x.nombre)
+}
+alert(`Las bebidas en stock son:${BebidasEnStock}`)
+const buscastock = BEBIDASSS.find((x)=>{
+    return x == bebida4
+})
+console.log(buscastock)
+if(isNaN(Nombre) ){//true1 == 1
 let cantidadDeDinero = parseInt(prompt("ingrese el monto que dispone y le diremos que podra comprar"));
-if(documentTrue == 1 && bebida4.stock == "si"){
+if(documentTrue == 1 && buscastock !== undefined ){
     while(true){
     if(cantidadDeDinero >= Bebida2.precio && cantidadDeDinero < Bebida1.precio){
         if(bebida4.precio >= Bebida2.precio && bebida4.precio < Bebida1.precio){
@@ -191,10 +211,18 @@ if(bebida > 1){
     }
     contadorDeIntentosTarjeta++
 } while (contadorDeIntentosTarjeta < 3)
-    for(let x of BEBIDASSS){
-        console.log(BEBIDASSS)
+    for(let x of BEBIDASSSinfo){
+        console.log(x)
     }
-    console.log(vueltaDeInformacion(DNIFINAL,Nombre,cantidadDeDinero));
+    const persona1 = new vueltaDeInformacion(DNIFINAL,Nombre,cantidadDeDinero)
+    const persona2 = new vueltaDeInformacion(1434131443431,"juan",3)
+    const persona3 = new vueltaDeInformacion(1343343434,"pedro",8)
+    const persona4 = new vueltaDeInformacion(12345678,"ignacio",12)
+    personasQueCompraron.push(persona1.info(),persona2.info(),persona3.info(),persona4.info())
+    const people = personasQueCompraron.filter((x)=>{ 
+        return `<b>${x}</b></br>`
+    })
+    document.write(people)
 }else{ 
     alert("Su tarjeta no a sido aceptada");
     console.error("Su tarjeta no a sido ingreada correctamente o reconocida");
