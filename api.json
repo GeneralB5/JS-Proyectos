@@ -1,0 +1,57 @@
+[
+     {
+        "precio": 30,
+        "nombre": "Gaming pc ",
+        "color": "Rojo",
+        "id": 12566
+    },
+    {
+        "precio": 10,
+        "nombre": "Linterna",
+        "color": "Negro",
+        "id": 12341
+    },
+    {
+        "precio": 13,
+        "nombre": "Auriculares",
+        "color": "Blanco",
+        "id": 19876
+    },
+     {
+        "precio": 20,
+        "nombre": "Microfono",
+        "color": "Negro",
+        "id": 17136
+        
+    },
+    {
+        "precio": 6,
+        "nombre": "Cable usb",
+        "color": "blanco",
+        "id":13311
+    },
+    {
+        "precio": 10,
+        "nombre": "Linterna",
+        "color": "Negro",
+        "id": 12876
+    },
+    {
+        "precio": 10,
+        "nombre": "Linterna",
+        "color": "Negro",
+        "id": 18888
+    },
+    {
+        "precio": 10,
+        "nombre": "Linterna",
+        "color": "Negro",
+        "id": 12347
+    },
+    {
+        "precio": 10,
+        "nombre": "Linterna",
+        "color": "Negro",
+        "id": 12344
+    }
+]
