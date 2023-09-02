@@ -7,6 +7,14 @@ header{
     background-color: rgb(145, 145, 145);
     height: 110px;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+     rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+     rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .divprincipalheader{
     background-color: rgb(218, 218, 218);
@@ -20,19 +28,49 @@ header{
     margin-left: 10px;
     margin-top: 10px;
     border: solid 1px black;
-    
+    box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .iconcarrito{
     width: 30px;
     height: 30px;
-    margin-right: 20px;
-    margin-top: 10px;
+    margin-right: 10px;
+    margin: auto;
+    
 }
 .div-cart{
-    display: flex;
-    justify-content: space-evenly;
     width: 150px;
     margin-top: 25px;
+}
+.div-div-carrito{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    display: flex;
+    transition: transform 250ms;
+    will-change: transform ; 
+    box-shadow: 
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+.div-div-carrito:hover,
+.div-div-carrito:focus{
+    transform: translate(-5px,-5px);
 }
 //////////
 .searchdiv{

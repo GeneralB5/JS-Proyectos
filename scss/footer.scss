@@ -45,10 +45,12 @@ margin: auto;
 }
 ////img
 .imgfooter{
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 140px;
     border-radius: 50%;
     border: solid 1px #000000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, 
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 //letras footer
 .letrasdefooter{

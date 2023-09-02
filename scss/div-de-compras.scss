@@ -9,6 +9,13 @@
     border-radius: 15px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    transition: transform 250ms;
+    will-change: transform ;  
+    margin-bottom: 10px;
+}
+.divdecompras:hover,
+.divdecompras:focus{
+    transform: translate(-5px, -10px) ;
 }
 .imgdecompras{
     height: 100%;
@@ -45,6 +52,8 @@
     font-family: perpetua;
     border-radius: 10px;
     color: aliceblue;
+    transition: transform 5050ms;
+    will-change: transform ;   
 }
 .pdivcompr{
     text-align: left;
@@ -109,4 +118,37 @@ grid-row-gap: 10px;
     place-items: center;
     padding-left: 50px;
     padding-right: 50px;
+}
+//////////////nuevo
+.divdecomprasnuevo{
+    background-color: rgba(216, 143, 200, 0.932);
+    width: 250px;
+    height: 370px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid rgb(26, 26, 26);
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    transition: transform 250ms;
+    will-change: transform ;  
+    margin-bottom: 10px;
+}
+.divdecomprasnuevo:hover,
+.divdecomprasnuevo:focus{
+    transform: translate(-5px, -10px) ;
+}
+.labelnuevo{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    margin: auto;
+    color: rgb(210, 217, 224);
+    border-radius: 25px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    border: 3px rgb(231, 231, 63) solid;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
