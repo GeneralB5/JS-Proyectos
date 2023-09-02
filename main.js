@@ -1,3 +1,57 @@
+const header =document.getElementById('header')
+header.innerHTML = `
+<div class="divprincipalheader">
+            <div class="Header-divss">
+                <div><img class="logo" src="./img/logo/Libre mercado (1).png" alt="Logo"></div>
+                <div class="searchdiv"><input id="Buscador" type="search" placeholder="PC,Auriculares,Etc...."></div>
+                <div class="div-cart">
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight">
+                        <div class="div-div-carrito">
+                            <img class="iconcarrito  " src="./img/svg/shopping-cart-add-button_icon-icons.com_56132.png"
+                                alt="Carrito">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div id="Carritodondemeter" class="offcanvas-body">
+                   
+                </div>
+                <div id="TotalesDivInicial" class="offcavas-footer oofcanvacolor">
+                   
+                </div>
+            </div>
+        </div>
+        </div> 
+`
+const footer = document.getElementById('Footerr')
+footer.innerHTML = `
+<div class="grupo-1">
+            <div class="box1">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Aqui permitimos el libre mercado sin necesidad de falcedades o otras cosas, entregamos los
+                    productos en el plazo de 15-20 dias</p>
+            </div>
+            <div class="box">
+                <img class="imgfooter" src="./img/logo/Libre mercado (1).png" alt="">
+            </div>
+            <div class="box">
+                <h2 class=" h2box">SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#"><img class="prueba-hover" src="./icons/icons8-facebook.svg" alt="facebook"></a>
+                    <a href="#"><img class="prueba-hover" src="./icons/icons8-instagram.svg" alt="instagram"></a>
+                    <a href="#"><img class="prueba-hover" src="./icons/icons8-twitter.svg" alt="twitter"></a>
+                    <a href="#"><img class="prueba-hover" src="./icons/icons8-youtube.svg" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+`
 const divdearriba = document.getElementById("divdearriba")
 divdearriba.innerHTML = `
 <button class="animated-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
