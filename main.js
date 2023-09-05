@@ -169,7 +169,6 @@ function agregaralcarritobb(pro, id) {
         const newmemori = memori
         if (proi === -1) {
             newmemori.push(obtnewpro(pro))
-            newsmemeori.push(obtnewpro(pro))
         } else {
             newmemori[proi].cantidad++;
             cantidad = newmemori[proi].cantidad
